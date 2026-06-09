@@ -25,11 +25,11 @@ export function detalleTareaPage(tarea) {
                 </p>
 
                 <a href="/tareas" class="btn btn-secondary">
-                    Volver
+                    <i class="bi bi-arrow-90deg-left"> Volver</i>
                 </a>
 
                 <a href="/tareas/${tarea.id}/editar" class="btn btn-warning">
-                    Editar
+                    <i class="bi bi-pencil"> Editar</i>
                 </a>
             </div>
         </div>
