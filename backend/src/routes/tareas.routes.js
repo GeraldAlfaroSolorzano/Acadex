@@ -3,20 +3,22 @@ import { Router } from "express";
 import {
     listarTareas,
     verDetalleTarea,
-    mostrarFormularioNuevaTarea,
+    //mostrarFormularioNuevaTarea,
     crearTarea,
-    mostrarFormularioEditarTarea,
+    //mostrarFormularioEditarTarea,
     actualizarTarea,
-    eliminarTarea
+    eliminarTarea,
+    mostrarResumen
 } from "../controllers/tareas.controller.js";
 
 const router = Router();
 
 router.get("/", listarTareas);
-router.get("/nueva", mostrarFormularioNuevaTarea);
+//router.get("/nueva", mostrarFormularioNuevaTarea);
 router.post("/", crearTarea);
+router.get("/resumen", mostrarResumen);
 router.get("/:id", verDetalleTarea);
-router.get("/:id/editar", mostrarFormularioEditarTarea);
+//router.get("/:id/editar", mostrarFormularioEditarTarea);
 router.post("/:id/editar", actualizarTarea);
 router.post("/:id/eliminar", eliminarTarea);
 

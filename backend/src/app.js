@@ -24,10 +24,10 @@ app.get("/", (req, res) => {
 
 app.get("/resumen", mostrarResumen);
 
-app.use("/tareas", tareasRoutes);
+app.use("/api/tareas", tareasRoutes);
 
 app.use((req, res) => {
-    res.status(404).send(error404Page());
+    res.json({ error: "Ruta no encontrada" });
 });
 
 app.listen(PORT, () => {
